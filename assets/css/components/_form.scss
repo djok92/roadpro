@@ -1,0 +1,138 @@
+/* Placeholder */
+
+::-webkit-input-placeholder {
+    color: $black;
+}
+
+::-moz-placeholder {
+    color: $black;
+}
+
+:-ms-input-placeholder {
+    color: $black;
+}
+
+:-moz-placeholder {
+    color: $black;
+}
+
+
+/* Form Elements */
+
+.button {
+    line-height: 20px;
+    padding: 9px 20px;
+    border-radius: 20px;
+    min-width: 180px;
+    text-transform: uppercase;
+    font-weight: $bold;
+    color: $white;
+    background-color: $red;
+    border: 1px solid $red;
+    display: inline-block;
+    &:hover {
+        color: $white;
+    }
+    &.is-black {
+        background-color: $black;
+        border-color: $black;
+    }
+}
+
+a.button {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/* Custom Select Box */
+
+.select-wrapper {
+    position: relative;
+    select {
+        // display: none;
+        border: 0;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+    }
+}
+
+.select-selected {
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    color: $black;
+    font-size: 1rem;
+    line-height: 1.125em;
+    font-weight: $medium;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &:after {
+        position: absolute;
+        content: "";
+        top: 20px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: $black transparent transparent transparent;
+    }
+    &.select-arrow-active {
+        &:after {
+            border-color: transparent transparent $black transparent;
+            top: 14px;
+        }
+    }
+}
+
+
+/*style the items (options), including the selected item:*/
+
+.select-items {
+    position: absolute;
+    background-color: $white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    div {
+        border: 1px solid transparent;
+        border-color: transparent transparent rgba($border, 0.6) transparent;
+        cursor: pointer;
+        user-select: none;
+        color: $black;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        font-weight: $medium;
+        padding: .75rem 1.25rem;
+        transition: all ease-in-out 150ms;
+        &:last-of-type {
+            border-color: transparent;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+
+/*hide the items when the select box is closed:*/
+
+.select-hide {
+    display: none;
+}
+
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
