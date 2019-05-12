@@ -1,0 +1,87 @@
+.landing {
+
+  font-family: $secondary-font;
+
+  &-bkg {
+    background: url('/assets/images/landing-bkg.png');
+    background-size: cover;
+    background-position: center right;
+  }
+
+  .header {
+    &:before {
+      content: none;
+    }
+
+    @media (max-width: 767px) {
+      padding: 20px 10px;
+    }
+
+    &-top {
+      background-color: transparent;
+      border: none;
+
+      &__right {
+        align-items: center;
+        text-transform: uppercase;
+
+        @media (max-width: 767px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .is-red--secondary {
+          text-align: center;
+          margin-left: 70px;
+
+          @media (max-width: 767px) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+
+    &-content {
+      width: 375px;
+      margin: 0 100px 0 auto;
+
+      @media (max-width: 767px) {
+        margin: 0 auto;
+      }
+
+      &__heading {
+        font-size: 50px;
+        color: $blue-dark;
+        line-height: 54px;
+      }
+
+      &__info {
+        font-size: 13px;
+        margin: 30px 0;
+        color: $black-secondary;
+      }
+
+      .is-red {
+        text-align: center;
+      }
+    }
+  }
+
+  .footer {
+    @media (max-width: 767px) {
+      padding: 20px 10px;
+    }
+  }
+
+}
