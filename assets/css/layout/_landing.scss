@@ -21,6 +21,12 @@
       background-color: transparent;
       border: none;
 
+      &__content {
+        @media (max-width: 767px) {
+          align-items: flex-end;
+        }
+      }
+
       &__right {
         align-items: center;
         text-transform: uppercase;
@@ -37,6 +43,11 @@
 
           @media (max-width: 767px) {
             margin-left: 0;
+            font-size: 11px;
+            padding: 5px 10px;
+            line-height: 11px;
+            width: 90px;
+            min-width: 90px;
           }
         }
       }
