@@ -1,11 +1,8 @@
 .profile {
   font-family: $secondary-font;
-  // position: fixed;
   width: 100%;
   height: 100%;
-  // top: 300px;
-  left: 0;
-  margin-top: 150px;
+  margin-top: 130px;
   z-index: 999;
 
   .overlay {
@@ -32,18 +29,41 @@
     position: relative;
     background: $gray-medium;
     padding: 75px 65px 75px 100px;
+
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
   }
 
   &-content {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+
+    .section-heading {
+      @media (max-width: 575px) {
+        text-align: center;
+      }
+    }
+
     &__left {
       margin-right: 45px;
       flex: 1 1 55%;
 
+      @media (max-width: 991px) {
+        flex-basis: 100%;
+        margin: 0 auto 30px auto;
+      }
+
       .history {
         margin-bottom: 90px;
+
+        @media (max-width: 450px) {
+          margin-bottom: 30px;
+        }
       }
     }
 
@@ -51,11 +71,24 @@
       margin-left: 45px;
       flex: 1 1 45%;
 
+      @media (max-width: 991px) {
+        flex-basis: 100%;
+        margin: 0 auto;
+      }
+
       .form-text {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 13px;
+
+        @media (max-width: 991px) {
+          justify-content: flex-start
+        }
+
+        @media (max-width: 575px) {
+          justify-content: center
+        }
 
         p {
           &:first-of-type {
@@ -64,6 +97,10 @@
             letter-spacing: 1px;
             line-height: 42px;
             font-weight: 700;
+
+            @media (max-width: 991px) {
+              margin-right: 15px;
+            }
           }
 
           &:last-of-type {
@@ -74,17 +111,9 @@
       }
 
       .form-inputs {
+
         &>* {
-          margin-bottom: 8px;
-        }
-
-        .half-width-container {
-          display: flex;
-          justify-content: space-between;
-
-          &> :first-child {
-            margin-right: 10px;
-          }
+          margin-bottom: 10px;
         }
 
         input {
@@ -99,12 +128,30 @@
         select {
           min-height: 50px;
 
+          @media (max-width: 575px) {
+            margin: 0 0 10px 0;
+          }
+
           &.full-width {
-            width: 100%
+            width: 100%;
           }
 
           &.half-width {
-            width: 50%;
+            width: 49%;
+            display: inline-block;
+            white-space: normal;
+
+            @media (max-width: 575px) {
+              width: 100%;
+            }
+          }
+
+          &.first {
+            float: left;
+          }
+
+          &.second {
+            float: right;
           }
         }
       }
@@ -136,11 +183,24 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+
     .card {
       border: 1px solid $gray-lighter;
       padding: 20px 15px;
       position: relative;
       flex: 1 1 0;
+
+      @media (max-width: 991px) {
+        margin: 0 10px;
+      }
+
+      @media (max-width: 575px) {
+        flex-basis: 100%;
+        margin-bottom: 25px;
+      }
 
       &.active {
         background: $white;
@@ -151,7 +211,6 @@
         margin-bottom: 35px;
 
         img {
-          max-width: 87px;
           max-height: 87px;
           object-fit: cover;
           object-position: center;
@@ -164,6 +223,10 @@
         color: $blue-dark;
         font-weight: 700;
         max-height: 30px;
+
+        @media (max-width: 575px) {
+          text-align: center;
+        }
 
         p {
           margin: 0;
@@ -185,9 +248,16 @@
         line-height: 24px;
         color: $blue-dark;
         font-weight: 700;
-        position: relative;
         text-align: left;
         margin-top: 15px;
+
+        @media (max-width: 575px) {
+          text-align: center;
+        }
+
+        p {
+          position: relative;
+        }
       }
 
       &__link {
@@ -208,6 +278,11 @@
         bottom: -14px;
         right: 20px;
         height: 27px;
+
+        @media (max-width: 575px) {
+          right: 50%;
+          transform: translateX(50%);
+        }
 
         &:hover {
           text-decoration: none;
@@ -242,7 +317,7 @@
 
       .bg-highlight {
         &::before {
-          bottom: 20px;
+          bottom: 3px;
           height: 10px;
         }
       }

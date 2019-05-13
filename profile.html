@@ -47,8 +47,8 @@
                     <div class="card__text">
                       <p>Followed Us on Twitter</p>
                     </div>
-                    <div class="card__points bg-highlight">
-                      <p>15pts</p>
+                    <div class="card__points ">
+                      <p class="bg-highlight">15pts</p>
                     </div>
                     <a href="#" class="card__link">visit</a>
                   </div>
@@ -60,8 +60,8 @@
                     <div class="card__text">
                       <p>Followed Us on Instagram</p>
                     </div>
-                    <div class="card__points bg-highlight">
-                      <p>15pts</p>
+                    <div class="card__points">
+                      <p class="bg-highlight">15pts</p>
                     </div>
                     <a href="#" class="card__link">visit</a>
                   </div>
@@ -74,8 +74,8 @@
                       <p>Uploaded Receipt</p>
                       <span class="date">december 4 2019</span>
                     </div>
-                    <div class="card__points bg-highlight">
-                      <p>85pts</p>
+                    <div class="card__points">
+                      <p class="bg-highlight">85pts</p>
                     </div>
                     <a href="#" class="card__link">visit</a>
                   </div>
@@ -98,8 +98,8 @@
                       <p>Dunkin Donuts</p>
                       <span class="date">december 4 2019</span>
                     </div>
-                    <div class="card__points bg-highlight">
-                      <p>15pts</p>
+                    <div class="card__points">
+                      <p class="bg-highlight">15pts</p>
                     </div>
                     <a href="#" class="card__link">visit</a>
                   </div>
@@ -112,8 +112,8 @@
                       <p>Southwest Airlines</p>
                       <span class="date">december 4 2019</span>
                     </div>
-                    <div class="card__points bg-highlight">
-                      <p>200pts</p>
+                    <div class="card__points">
+                      <p class="bg-highlight">200pts</p>
                     </div>
                     <a href="#" class="card__link">visit</a>
                   </div>
@@ -126,8 +126,8 @@
                       <p>CVS Pharmacy</p>
                       <span class="date">december 4 2019</span>
                     </div>
-                    <div class="card__points bg-highlight">
-                      <p>85pts</p>
+                    <div class="card__points">
+                      <p class="bg-highlight">85pts</p>
                     </div>
                     <a href="#" class="card__link">visit</a>
                   </div>
@@ -143,51 +143,47 @@
                 <p>*required fields</p>
               </div>
               <div class="form-inputs">
-                <div class="half-width-container">
-                  <input type="text" class="half-width" name="firstName" id="firstName" placeholder="First Name*">
-                  <input type="text" class="half-width" name="lastName" id="lastName" placeholder="Last Name*">
-                </div>
+
+                <input type="text" class="half-width first" name="firstName" id="firstName" placeholder="First Name*">
+                <input type="text" class="half-width second" name="lastName" id="lastName" placeholder="Last Name*">
+
                 <input type="email" class="full-width" name="email" id="email" placeholder="Email*">
                 <input type="tel" class="full-width" name="phone" id="phone" placeholder="Phone*">
                 <input type="text" class="full-width" name="address1" id="address1" placeholder="Address 1*">
                 <input type="text" class="full-width" name="address2" id="address2" placeholder="Address 2*">
                 <input type="text" class="full-width" name="city" id="city" placeholder="City*">
-                <div class="half-width-container">
-                  <select class="half-width" name="state" id="state">
-                    <option value="" disabled selected hidden>State*</option>
-                  </select>
-                  <input class="half-width" type="number" name="zipCode" id="zipCode" placeholder="Zip Code*">
-                </div>
-                <div class="half-width-container">
-                  <select class="half-width" name="gender" id="geneder">
-                    <option value="" disabled selected hidden>Gender</option>
-                  </select>
-                  <input class="half-width" type="number" name="dob" id="dob" placeholder="DOB*">
-                </div>
-                <div class="half-width-container">
-                  <select class="half-width" name="driverType" id="driverType">
-                    <option value="" disabled selected hidden>Driver Type</option>
-                  </select>
-                  <select class="half-width" name="fleetCompany" id="fleetCompany">
-                    <option value="" disabled selected hidden>Fleet Company</option>
-                  </select>
-                </div>
-                <div class="half-width-container">
-                  <select class="half-width" name="retailerPreference" id="retailerPreference">
-                    <option value="" disabled selected hidden>Retailer Preference</option>
-                  </select>
-                  <select class="half-width" name="truckBrand" id="truckBrand">
-                    <option value="" disabled selected hidden>Truck Brand</option>
-                  </select>
-                </div>
-                <div class="half-width-container">
-                  <select class="half-width" name="yearStartedDriving" id="yearStartedDriving">
-                    <option value="" disabled selected hidden>Year you started driving a truck?*</option>
-                  </select>
-                  <select class="half-width" name="hearAbout" id="hearAbout">
-                    <option value="" disabled selected hidden>How did you hear about us?*</option>
-                  </select>
-                </div>
+
+                <select class="half-width first" name="state" id="state">
+                  <option value="" disabled selected hidden>State*</option>
+                </select>
+                <input class="half-width second" type="number" name="zipCode" id="zipCode" placeholder="Zip Code*">
+
+                <select class="half-width first" name="gender" id="geneder">
+                  <option value="" disabled selected hidden>Gender</option>
+                </select>
+                <input class="half-width second" type="number" name="dob" id="dob" placeholder="DOB*">
+
+                <select class="half-width first" name="driverType" id="driverType">
+                  <option value="" disabled selected hidden>Driver Type</option>
+                </select>
+
+                <select class="half-width second" name="fleetCompany" id="fleetCompany">
+                  <option value="" disabled selected hidden>Fleet Company</option>
+                </select>
+
+                <select class="half-width first" name="retailerPreference" id="retailerPreference">
+                  <option value="" disabled selected hidden>Retailer Preference</option>
+                </select>
+                <select class="half-width second" name="truckBrand" id="truckBrand">
+                  <option value="" disabled selected hidden>Truck Brand</option>
+                </select>
+
+                <select class="half-width first" name="yearStartedDriving" id="yearStartedDriving">
+                  <option value="" disabled selected hidden>Year you started driving a truck?*</option>
+                </select>
+                <select class="half-width second" name="hearAbout" id="hearAbout">
+                  <option value="" disabled selected hidden>How did you hear about us?*</option>
+                </select>
               </div>
               <div class="button-holder">
                 <a href="#" class="button is-red">save</a>

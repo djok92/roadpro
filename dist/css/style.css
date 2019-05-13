@@ -1166,8 +1166,7 @@ a.button:hover {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%;
-  left: 0;
-  margin-top: 150px;
+  margin-top: 130px;
   z-index: 999; }
   .profile .overlay {
     background: rgba(0, 0, 0, 0.4);
@@ -1189,38 +1188,62 @@ a.button:hover {
     position: relative;
     background: #f9f9f9;
     padding: 75px 65px 75px 100px; }
+    @media (max-width: 767px) {
+      .profile-container {
+        padding: 20px; } }
   .profile-content {
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 991px) {
+      .profile-content {
+        flex-direction: column; } }
+    @media (max-width: 575px) {
+      .profile-content .section-heading {
+        text-align: center; } }
     .profile-content__left {
       margin-right: 45px;
       flex: 1 1 55%; }
+      @media (max-width: 991px) {
+        .profile-content__left {
+          flex-basis: 100%;
+          margin: 0 auto 30px auto; } }
       .profile-content__left .history {
         margin-bottom: 90px; }
+        @media (max-width: 450px) {
+          .profile-content__left .history {
+            margin-bottom: 30px; } }
     .profile-content__right {
       margin-left: 45px;
       flex: 1 1 45%; }
+      @media (max-width: 991px) {
+        .profile-content__right {
+          flex-basis: 100%;
+          margin: 0 auto; } }
       .profile-content__right .form-text {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 13px; }
+        @media (max-width: 991px) {
+          .profile-content__right .form-text {
+            justify-content: flex-start; } }
+        @media (max-width: 575px) {
+          .profile-content__right .form-text {
+            justify-content: center; } }
         .profile-content__right .form-text p:first-of-type {
           color: #000000;
           text-transform: uppercase;
           letter-spacing: 1px;
           line-height: 42px;
           font-weight: 700; }
+          @media (max-width: 991px) {
+            .profile-content__right .form-text p:first-of-type {
+              margin-right: 15px; } }
         .profile-content__right .form-text p:last-of-type {
           color: rgba(0, 0, 0, 0.5);
           text-transform: lowercase; }
       .profile-content__right .form-inputs > * {
-        margin-bottom: 8px; }
-      .profile-content__right .form-inputs .half-width-container {
-        display: flex;
-        justify-content: space-between; }
-        .profile-content__right .form-inputs .half-width-container > :first-child {
-          margin-right: 10px; }
+        margin-bottom: 10px; }
       .profile-content__right .form-inputs input {
         padding: 5px 10px; }
       .profile-content__right .form-inputs select {
@@ -1228,12 +1251,28 @@ a.button:hover {
       .profile-content__right .form-inputs input,
       .profile-content__right .form-inputs select {
         min-height: 50px; }
+        @media (max-width: 575px) {
+          .profile-content__right .form-inputs input,
+          .profile-content__right .form-inputs select {
+            margin: 0 0 10px 0; } }
         .profile-content__right .form-inputs input.full-width,
         .profile-content__right .form-inputs select.full-width {
           width: 100%; }
         .profile-content__right .form-inputs input.half-width,
         .profile-content__right .form-inputs select.half-width {
-          width: 50%; }
+          width: 49%;
+          display: inline-block;
+          white-space: normal; }
+          @media (max-width: 575px) {
+            .profile-content__right .form-inputs input.half-width,
+            .profile-content__right .form-inputs select.half-width {
+              width: 100%; } }
+        .profile-content__right .form-inputs input.first,
+        .profile-content__right .form-inputs select.first {
+          float: left; }
+        .profile-content__right .form-inputs input.second,
+        .profile-content__right .form-inputs select.second {
+          float: right; }
       .profile-content__right .button-holder {
         text-align: center;
         margin-top: 15px; }
@@ -1248,18 +1287,27 @@ a.button:hover {
 .cards__body {
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 575px) {
+    .cards__body {
+      flex-direction: column; } }
   .cards__body .card {
     border: 1px solid #edecec;
     padding: 20px 15px;
     position: relative;
     flex: 1 1 0; }
+    @media (max-width: 991px) {
+      .cards__body .card {
+        margin: 0 10px; } }
+    @media (max-width: 575px) {
+      .cards__body .card {
+        flex-basis: 100%;
+        margin-bottom: 25px; } }
     .cards__body .card.active {
       background: #fff; }
     .cards__body .card__icon {
       text-align: center;
       margin-bottom: 35px; }
       .cards__body .card__icon img {
-        max-width: 87px;
         max-height: 87px;
         object-fit: cover;
         object-position: center; }
@@ -1269,6 +1317,9 @@ a.button:hover {
       color: #3b4559;
       font-weight: 700;
       max-height: 30px; }
+      @media (max-width: 575px) {
+        .cards__body .card__text {
+          text-align: center; } }
       .cards__body .card__text p {
         margin: 0; }
       .cards__body .card__text .date {
@@ -1284,9 +1335,13 @@ a.button:hover {
       line-height: 24px;
       color: #3b4559;
       font-weight: 700;
-      position: relative;
       text-align: left;
       margin-top: 15px; }
+      @media (max-width: 575px) {
+        .cards__body .card__points {
+          text-align: center; } }
+      .cards__body .card__points p {
+        position: relative; }
     .cards__body .card__link {
       display: flex;
       align-items: center;
@@ -1305,6 +1360,10 @@ a.button:hover {
       bottom: -14px;
       right: 20px;
       height: 27px; }
+      @media (max-width: 575px) {
+        .cards__body .card__link {
+          right: 50%;
+          transform: translateX(50%); } }
       .cards__body .card__link:hover {
         text-decoration: none; }
       .cards__body .card__link::before {
@@ -1330,7 +1389,7 @@ a.button:hover {
         font-size: 18px;
         color: #424242; }
     .cards__body .card .bg-highlight::before {
-      bottom: 20px;
+      bottom: 3px;
       height: 10px; }
 
 /* Hello ! */
